@@ -1,0 +1,20 @@
+[Unit]
+Description=ASRock Rack CVE-2024-54085 hunter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hunter
+WorkingDirectory=/opt/asrock-hunter
+ExecStart=/opt/asrock-hunter/venv/bin/python hunter.py -c config.yaml
+Restart=always
+RestartSec=20
+KillSignal=SIGTERM
+TimeoutStopSec=60
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
