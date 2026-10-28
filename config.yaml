@@ -1,0 +1,58 @@
+# ---- core ----
+db_path: data/hunter.db
+export_dir: data/exports
+log_file: data/hunter.log
+log_level: INFO
+
+# ---- target inputs ----
+subnets_file: subnets.txt
+datacenters_file: datacenter_subnets.txt
+use_datacenters: true
+asns_file: asns.txt
+use_asn_harvest: true
+resolve_hostnames: true
+
+# ---- scan behaviour ----
+ports: [443, 80, 8443, 5900, 5901, 623]
+schemes: [https, http]
+concurrency: 200
+per_host_delay: 0.15
+request_timeout: 12
+retries: 2
+max_ips_per_subnet: 4096      # sampled; --full overrides
+rescan_alive_hours: 168       # alive non-vuln recheck
+rescan_dead_hours: 720
+rescan_vuln_hours: 24
+max_attempts: 5
+
+# ---- harvesting ----
+harvest_enabled: true
+source_interval_hours: 6
+source_result_limit: 400
+engines:
+  shodan: true
+  fofa: true
+  zoomeye: true
+  quake: true
+  hunter: true
+  netlas: true
+  censys: true
+  onyphe: true
+  dork_ddg: true
+  dork_bing: true
+  crtsh: true
+  hackertarget: true
+  internetdb: true
+
+# ---- daemon ----
+cycle_interval: 900           # seconds between cycles
+cycle_jitter: 240
+daily_maintenance_hour: 4
+
+# ---- notifications (all optional, leave empty to disable) ----
+discord_webhook: ""
+slack_webhook: ""
+generic_webhook: ""
+telegram_bot_token: ""
+telegram_chat_id: ""
+notify_min_confidence: likely   # suspect | likely | confirmed
