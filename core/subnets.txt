@@ -1,0 +1,11 @@
+# One CIDR / range / IP per line. Replace or append your own.
+# Ranges already covered by datacenter_subnets.txt are deduplicated automatically.
+
+# --- example: a /24 sweep ---
+203.0.113.0/24
+
+# --- example: an explicit range ---
+198.51.100.10-198.51.100.60
+
+# --- example: single host ---
+192.0.2.55
