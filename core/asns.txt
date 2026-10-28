@@ -1,0 +1,26 @@
+# ASNs whose live BGP prefixes are re-derived weekly from ip2asn (keyless).
+24940    # Hetzner
+16276    # OVH
+14061    # DigitalOcean
+20473    # Vultr / Choopa
+63949    # Linode
+51167    # Contabo
+12876    # Scaleway
+60781    # Leaseweb
+28753    # Leaseweb DE
+36352    # ColoCrossing
+40676    # Psychz
+8100     # QuadraNet
+63473    # HostHatch
+62240    # RackNerd
+9009     # M247
+21859    # Zenlayer
+45102    # Alibaba Cloud
+132203   # Tencent Cloud
+136907   # Huawei Cloud
+31898    # Oracle Cloud
+53667    # Frantech / BuyVM
+55286    # ServerMania
+33387    # Nocix
+54665    # EGI Hosting
+54290    # Hostwinds
